@@ -10,4 +10,5 @@ import Foundation
 
 class Pokemon{
     var name : String = ""
+    var imageUrl : String = ""
 }

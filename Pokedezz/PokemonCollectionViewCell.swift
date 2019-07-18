@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pokemonNameLabel: UILabel!
+    @IBOutlet weak var pokemonImage: UIImageView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -27,6 +29,21 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     // MARK: Methods
     func setUpContent(pokemon:Pokemon?){
         pokemonNameLabel.text = pokemon?.name.uppercased()
+        if let imageURL = pokemon?.imageUrl{
+            Alamofire.request(imageURL, method: .get)
+                .validate()
+                .responseData(completionHandler: { (responseData) in
+                    self.pokemonImage.image = UIImage(data: responseData.data!)
+                    DispatchQueue.main.async {
+                        // Refresh you views
+                    }
+                })
+        }
+
+
+       
+
+       
     }
 
     

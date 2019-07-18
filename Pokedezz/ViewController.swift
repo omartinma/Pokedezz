@@ -24,11 +24,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 let swiftyJsonVar = JSON(response.data!)
                 let pokemonName = swiftyJsonVar["name"].string
-                if let pokemonName = pokemonName {
-                    let pokemon = Pokemon()
-                    pokemon.name = pokemonName
-                    self.pokemonDict[index] = pokemon
-                }
+                let pokemonImagesJson = swiftyJsonVar["sprites"]
+                let defaultImage = pokemonImagesJson["back_default"].string
+                
+                let pokemon = Pokemon()
+                pokemon.name = pokemonName!
+                pokemon.imageUrl = defaultImage!
+                self.pokemonDict[index] = pokemon
+                
+                
+                
+                
                 if(self.pokemonDict.count == self.maxPokemon){
                     completion()
                 }
