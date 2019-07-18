@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		E3D48A8522DE0400003789E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D48A8322DE0400003789E0 /* Main.storyboard */; };
 		E3D48A8722DE0400003789E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D48A8622DE0400003789E0 /* Assets.xcassets */; };
 		E3D48A8A22DE0400003789E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D48A8822DE0400003789E0 /* LaunchScreen.storyboard */; };
+		E3D8F7C222E06CCF00247945 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8F7C122E06CCF00247945 /* PokemonCollectionViewCell.swift */; };
+		E3DB8A4D22DFE17F00D7D09B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DB8A4C22DFE17F00D7D09B /* CardView.swift */; };
 		F2FFC7A297BBADBB33AFC061 /* Pods_Pokedezz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 444C54D4337392046B6177ED /* Pods_Pokedezz.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		E3D48A8622DE0400003789E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3D48A8922DE0400003789E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3D48A8B22DE0400003789E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3D8F7C122E06CCF00247945 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
+		E3DB8A4C22DFE17F00D7D09B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +50,6 @@
 				20D10B729609384C3BA43B52 /* Pods-Pokedezz.debug.xcconfig */,
 				C185C32AB93B7ED4792D26B7 /* Pods-Pokedezz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +88,8 @@
 				E3D48A8622DE0400003789E0 /* Assets.xcassets */,
 				E3D48A8822DE0400003789E0 /* LaunchScreen.storyboard */,
 				E3D48A8B22DE0400003789E0 /* Info.plist */,
+				E3DB8A4C22DFE17F00D7D09B /* CardView.swift */,
+				E3D8F7C122E06CCF00247945 /* PokemonCollectionViewCell.swift */,
 			);
 			path = Pokedezz;
 			sourceTree = "<group>";
@@ -205,6 +210,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D48A8222DE0400003789E0 /* ViewController.swift in Sources */,
+				E3DB8A4D22DFE17F00D7D09B /* CardView.swift in Sources */,
+				E3D8F7C222E06CCF00247945 /* PokemonCollectionViewCell.swift in Sources */,
 				E3D48A8022DE0400003789E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
