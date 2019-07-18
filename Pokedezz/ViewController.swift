@@ -42,20 +42,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         downloadDataFromAPI(completion:
             {
-                print("Total pokemon: " + String(self.pokemonDict.count))
                 self.pokemonCollectionView.reloadData()
-                // Iterate in dictionary
-            
-//                for index in self.minPokemon...self.maxPokemon {
-//
-//                }
-                
         })
     }
     
     // Mark: Collection view methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("Total pokemon: " + String(self.pokemonDict.count))
         return pokemonDict.count
     }
     
