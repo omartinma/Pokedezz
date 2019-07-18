@@ -10,8 +10,6 @@ import UIKit
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pokemonNameLabel: UILabel!
-    @IBOutlet weak var borderView: UIView!
-    
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -27,9 +25,14 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Methods
+    func setUpContent(name:String?){
+        pokemonNameLabel.text = name?.uppercased()
+    }
+
+    
     func setCellShadow() {
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
+        self.layer.shadowOffset = CGSize(width: 0, height: 1)
         self.layer.shadowOpacity = 0.2
         self.layer.shadowRadius = 10.0
         self.layer.masksToBounds = false
@@ -58,7 +61,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     func gradientBackgroundColor() {
         let colors = cellRandomBackgroundColors()
-        //self.contentView.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
+        self.contentView.setGradientBackgroundColor(colorOne: colors[0], colorTow: colors[1])
     }
     func roundCorner() {
         self.contentView.layer.cornerRadius = 12.0

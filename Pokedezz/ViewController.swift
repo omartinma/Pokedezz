@@ -55,8 +55,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let identifier = "PokemonCollectionViewCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PokemonCollectionViewCell
         let pokemon = pokemonDict[indexPath.row+1]
-        print(indexPath.row)
-        cell.pokemonNameLabel.text = pokemon
+        cell.setUpContent(name: pokemon)
         
         return cell
     }
