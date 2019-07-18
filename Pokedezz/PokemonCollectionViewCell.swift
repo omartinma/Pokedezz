@@ -25,8 +25,8 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Methods
-    func setUpContent(name:String?){
-        pokemonNameLabel.text = name?.uppercased()
+    func setUpContent(pokemon:Pokemon?){
+        pokemonNameLabel.text = pokemon?.name.uppercased()
     }
 
     

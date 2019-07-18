@@ -12,7 +12,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    var pokemonDict: [Int: String] = [:]
+    var pokemonDict: [Int: Pokemon] = [:]
     let minPokemon = 1
     let maxPokemon = 5
     
@@ -25,7 +25,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let swiftyJsonVar = JSON(response.data!)
                 let pokemonName = swiftyJsonVar["name"].string
                 if let pokemonName = pokemonName {
-                    self.pokemonDict[index] = pokemonName
+                    let pokemon = Pokemon()
+                    pokemon.name = pokemonName
+                    self.pokemonDict[index] = pokemon
                 }
                 if(self.pokemonDict.count == self.maxPokemon){
                     completion()
@@ -55,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         let identifier = "PokemonCollectionViewCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PokemonCollectionViewCell
         let pokemon = pokemonDict[indexPath.row+1]
-        cell.setUpContent(name: pokemon)
+        cell.setUpContent(pokemon: pokemon)
         
         return cell
     }
