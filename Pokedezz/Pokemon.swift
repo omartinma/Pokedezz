@@ -12,10 +12,5 @@ import UIKit
 class Pokemon{
     var name : String = ""
     var imageUrl : String = ""
-    //var imageData : UIImage
     var types :  [String]  = []
-    
-    /*init(fromImage : UIImage){
-        imageData = fromImage
-    }*/
 }
