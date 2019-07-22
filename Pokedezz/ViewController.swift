@@ -14,7 +14,7 @@ import SwiftyJSON
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var pokemonDict: [Int: Pokemon] = [:]
     let minPokemon = 1
-    let maxPokemon = 5
+    let maxPokemon = 15
     
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
     func downloadDataFromAPI(completion : @escaping ()->Void){
@@ -23,17 +23,32 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             Alamofire.request("https://pokeapi.co/api/v2/pokemon/" + String(index)).responseJSON { response in
                 
                 let swiftyJsonVar = JSON(response.data!)
+                
+                // Name
                 let pokemonName = swiftyJsonVar["name"].string
+                
+                // Images
                 let pokemonImagesJson = swiftyJsonVar["sprites"]
                 let defaultImage = pokemonImagesJson["back_default"].string
+                
+                // Types
+                var arrayTypes = [String]()
+                let pokemonTypesJson = swiftyJsonVar["types"].arrayObject
+                if pokemonTypesJson != nil{
+                    for typeIndex in 0...pokemonTypesJson!.count-1{
+                        let typeJson = pokemonTypesJson![typeIndex] as! [String : Any]
+                        let type = typeJson["type"] as! [String : Any]
+                        let typeName = type["name"]
+                        arrayTypes.append(typeName as! String)
+                    }
+                }
+                
                 
                 let pokemon = Pokemon()
                 pokemon.name = pokemonName!
                 pokemon.imageUrl = defaultImage!
+                pokemon.types = arrayTypes
                 self.pokemonDict[index] = pokemon
-                
-                
-                
                 
                 if(self.pokemonDict.count == self.maxPokemon){
                     completion()
@@ -50,7 +65,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         downloadDataFromAPI(completion:
             {
-                self.pokemonCollectionView.reloadData()
+               self.pokemonCollectionView.reloadData()
         })
     }
     
@@ -69,43 +84,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-    func add2Views(){
-        // Testing how to add views by code
-        let rect = CGRect(x: 10, y: 100, width: 100, height: 100)
-        var myView = UIView(frame: rect)
-        myView.backgroundColor = UIColor.purple
-        myView.layer.cornerRadius = 20.0
-        myView.layer.shadowColor = UIColor.gray.cgColor
-        myView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        myView.layer.shadowRadius = 12.0
-        myView.layer.shadowOpacity = 0.7
-        
-        let rectLabel = CGRect(x: 0, y: 10, width: 100, height: 20)
-        var label = UILabel(frame: rectLabel)
-        label.text = "sdasdsa"
-        label.textAlignment = NSTextAlignment.center
-        
-        myView.addSubview(label)
-        self.view.addSubview(myView)
-        
-        
-        let rect2 = CGRect(x: 10, y: 200, width: 100, height: 100)
-        var myView2 = UIView(frame: rect2)
-        myView2.backgroundColor = UIColor.purple
-        myView2.layer.cornerRadius = 20.0
-        myView2.layer.shadowColor = UIColor.gray.cgColor
-        myView2.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        myView2.layer.shadowRadius = 12.0
-        myView2.layer.shadowOpacity = 0.7
-        
-        let rectLabel2 = CGRect(x: 0, y: 10, width: 100, height: 20)
-        var label2 = UILabel(frame: rectLabel2)
-        label2.text = "sdasdsa"
-        label2.textAlignment = NSTextAlignment.center
-        
-        myView2.addSubview(label2)
-        self.view.addSubview(myView2)
-    }
+
     
 }
 
