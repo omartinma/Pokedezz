@@ -44,7 +44,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     }
     
     func chooseColorsByPokemonType(types:[String]) -> [UIColor] {
-        var dummyValue = colorsTable[3]!
+
         for type in types{
             print(type)
             switch type{
@@ -58,7 +58,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
                 continue
             }
         }
-        return dummyValue
+        return colorsTable[3]!
     }
     
     
