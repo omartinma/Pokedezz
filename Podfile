@@ -5,4 +5,5 @@ target 'Pokedezz' do
   # Pods for CocoaPodsTest
 pod 'Alamofire', '~> 4.0'
 pod 'SwiftyJSON'
+pod 'SDWebImage'
 end

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SDWebImage
 
 class PokemonCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pokemonNameLabel: UILabel!
@@ -36,16 +37,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         pokemonNameLabel.text = pokemon?.name.uppercased()
 
         //Pokemon image
-        if let imageURL = pokemon?.imageUrl{
-            Alamofire.request(imageURL, method: .get)
-                .validate()
-                .responseData(completionHandler: { (responseData) in
-                    self.pokemonImage.image = UIImage(data: responseData.data!)
-                    DispatchQueue.main.async {
-                        // Refresh you views
-                    }
-                })
-        }
+        pokemonImage.sd_setImage(with: URL(string: pokemon!.imageUrl))
         
         //Pokemon Color
         let colors = chooseColorsByPokemonType(types: pokemon!.types)
