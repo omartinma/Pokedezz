@@ -14,7 +14,7 @@ import SwiftyJSON
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var pokemonDict: [Int: Pokemon] = [:]
     let minPokemon = 1
-    let maxPokemon = 9
+    let maxPokemon = 10
     
     @IBOutlet weak var pokemonCollectionView: UICollectionView!
     func downloadDataFromAPI(completion : @escaping ()->Void){

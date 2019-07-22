@@ -55,7 +55,16 @@ import UIKit
 
 extension UIView {
     func setGradientBackgroundColor(colorOne: UIColor, colorTwo: UIColor) {
-        let gradientLayer = CAGradientLayer()
+        var gradientLayer = CAGradientLayer()
+        if let sublayers = layer.sublayers {
+            for sublayer in sublayers {
+                if let gLayer = sublayer as? CAGradientLayer {
+                    gradientLayer = gLayer
+                    break
+                }
+            }
+        }
+        
         gradientLayer.frame = bounds
         gradientLayer.colors = [colorOne.cgColor, colorTwo.cgColor]
         gradientLayer.locations = [0.0, 1.0]

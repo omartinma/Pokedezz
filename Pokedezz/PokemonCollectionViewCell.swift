@@ -39,7 +39,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         //Pokemon image
         pokemonImage.sd_setImage(with: URL(string: pokemon!.imageUrl))
         
-        //Pokemon Color with gradient not working
+      //  Pokemon Color with gradient not working
         let colors = chooseColorsByPokemonType(types: pokemon!.types)
         self.contentView.setGradientBackgroundColor(colorOne: colors[0], colorTwo: colors[1])
 
