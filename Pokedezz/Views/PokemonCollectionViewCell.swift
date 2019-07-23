@@ -35,7 +35,10 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         pokemonNameLabel.text = pokemon?.name.uppercased()
         
         //Pokemon image
-        pokemonImage.sd_setImage(with: URL(string: pokemon!.imageUrl))
+        pokemonImage.sd_setImage(with: URL(string: pokemon!.imageUrl), completed: { (image, error, cacheType, imageURL) in
+            // Perform operation.
+           //pokemon?.imageData = image
+        })
         
         let colors = chooseColorsByPokemonType(types: pokemon!.types)
         self.contentView.setGradientBackgroundColor(colorOne: colors[0], colorTwo: colors[1])

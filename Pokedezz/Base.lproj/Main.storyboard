@@ -97,13 +97,39 @@
                     <view key="view" contentMode="scaleToFill" id="Z1C-NA-xyl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp0-YQ-x6y">
+                                <rect key="frame" x="49" y="176" width="238" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="782-sW-q9J">
+                                <rect key="frame" x="20" y="265" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="3UN-TI-LKP"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="782-sW-q9J" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="20" id="G2M-vj-Ehh"/>
+                            <constraint firstItem="Qp0-YQ-x6y" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="Qhl-R5-ymQ"/>
+                            <constraint firstItem="Qp0-YQ-x6y" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="132" id="T1L-N8-roH"/>
+                            <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qp0-YQ-x6y" secondAttribute="trailing" constant="127" id="iK5-gX-Hqf"/>
+                            <constraint firstItem="782-sW-q9J" firstAttribute="top" secondItem="Qp0-YQ-x6y" secondAttribute="bottom" constant="53" id="oJ0-tU-UIj"/>
+                            <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="782-sW-q9J" secondAttribute="trailing" constant="20" id="q1a-Z7-IAR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vV1-OW-bKM"/>
                     </view>
+                    <connections>
+                        <outlet property="pokemonImageView" destination="782-sW-q9J" id="y1N-KC-jwk"/>
+                        <outlet property="pokemonLabelName" destination="Qp0-YQ-x6y" id="DmC-Ar-Hwp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFB-0y-Sml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="55"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="54.910714285714285"/>
         </scene>
     </scenes>
     <resources>

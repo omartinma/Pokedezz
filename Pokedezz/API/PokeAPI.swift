@@ -25,7 +25,7 @@ public class PokeAPI{
                 
                 // Images
                 let pokemonImagesJson = swiftyJsonVar["sprites"]
-                let defaultImage = pokemonImagesJson["back_default"].string
+                let defaultImage = pokemonImagesJson["front_default"].string
                 
                 // Types
                 var arrayTypes = [String]()
@@ -43,6 +43,7 @@ public class PokeAPI{
                 pokemon.name = pokemonName!
                 pokemon.imageUrl = defaultImage!
                 pokemon.types = arrayTypes
+                pokemon.id = index
                 pokemonDict[index] = pokemon
                 
                 if(pokemonDict.count == maxPokemon){

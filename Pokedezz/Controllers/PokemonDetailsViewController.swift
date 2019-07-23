@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PokemonDetailsViewController: UIViewController {
 
     var pokemon : Pokemon?
+    @IBOutlet weak var pokemonImageView: UIImageView!
+    @IBOutlet weak var pokemonLabelName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(pokemon?.name)
-        view.setGradientBackgroundColor(colorOne: (pokemon?.colors[0])!, colorTwo: (pokemon?.colors[1])!)
-        // Do any additional setup after loading the view.
+        if let poke = pokemon{
+            view.setGradientBackgroundColor(colorOne: (poke.colors[0]), colorTwo: (poke.colors[1]))
+            pokemonLabelName.text = poke.name.capitalizingFirstLetter()
+
+            //Getting new better image
+            let urlString = "https://pokeres.bastionbot.org/images/pokemon/" + String(poke.id) + ".png"
+            print(urlString)
+           pokemonImageView.sd_setImage(with: URL(string: urlString))
+        }
+  
+        
     }
     
 
