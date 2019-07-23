@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E39FA49622E757BF00BC36C7 /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA49522E757BF00BC36C7 /* PokeAPI.swift */; };
+		E39FA49822E76B1F00BC36C7 /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FA49722E76B1F00BC36C7 /* PokemonDetailsViewController.swift */; };
 		E3D48A8022DE0400003789E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D48A7F22DE0400003789E0 /* AppDelegate.swift */; };
 		E3D48A8222DE0400003789E0 /* PokemonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D48A8122DE0400003789E0 /* PokemonsCollectionViewController.swift */; };
 		E3D48A8522DE0400003789E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3D48A8322DE0400003789E0 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		444C54D4337392046B6177ED /* Pods_Pokedezz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedezz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C185C32AB93B7ED4792D26B7 /* Pods-Pokedezz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedezz.release.xcconfig"; path = "Target Support Files/Pods-Pokedezz/Pods-Pokedezz.release.xcconfig"; sourceTree = "<group>"; };
 		E39FA49522E757BF00BC36C7 /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
+		E39FA49722E76B1F00BC36C7 /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
 		E3D48A7C22DE0400003789E0 /* Pokedezz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedezz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D48A7F22DE0400003789E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3D48A8122DE0400003789E0 /* PokemonsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E3D48A8122DE0400003789E0 /* PokemonsCollectionViewController.swift */,
+				E39FA49722E76B1F00BC36C7 /* PokemonDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E3D8F7C422E0887C00247945 /* Extension.swift in Sources */,
 				E3D48A8222DE0400003789E0 /* PokemonsCollectionViewController.swift in Sources */,
 				E39FA49622E757BF00BC36C7 /* PokeAPI.swift in Sources */,
+				E39FA49822E76B1F00BC36C7 /* PokemonDetailsViewController.swift in Sources */,
 				E3D8F7C222E06CCF00247945 /* PokemonCollectionViewCell.swift in Sources */,
 				E3D48A8022DE0400003789E0 /* AppDelegate.swift in Sources */,
 			);

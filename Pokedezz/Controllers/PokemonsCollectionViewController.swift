@@ -45,7 +45,13 @@ class PokemonsCollectionViewController: UIViewController, UICollectionViewDelega
     }
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is PokemonDetailsViewController{
+            let vc = segue.destination as? PokemonDetailsViewController
+            var index = self.pokemonCollectionView.indexPathsForSelectedItems?.first
+            vc?.pokemon = pokemonDict[index!.row+1]
+        }
+    }
     
 }
 

@@ -39,6 +39,7 @@ class PokemonCollectionViewCell: UICollectionViewCell {
         
         let colors = chooseColorsByPokemonType(types: pokemon!.types)
         self.contentView.setGradientBackgroundColor(colorOne: colors[0], colorTwo: colors[1])
+        pokemon?.colors = colors
     }
     
     func chooseColorsByPokemonType(types:[String]) -> [UIColor] {

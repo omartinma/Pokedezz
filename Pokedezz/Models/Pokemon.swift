@@ -13,4 +13,5 @@ class Pokemon{
     var name : String = ""
     var imageUrl : String = ""
     var types :  [String]  = []
+    var colors : [UIColor] = []
 }

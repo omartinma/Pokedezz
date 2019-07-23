@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="66.964285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon Details View Controller-->
         <scene sceneID="KIa-ZM-LTT">
             <objects>
-                <viewController id="3L3-u8-TZS" sceneMemberID="viewController">
+                <viewController id="3L3-u8-TZS" customClass="PokemonDetailsViewController" customModule="Pokedezz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z1C-NA-xyl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
