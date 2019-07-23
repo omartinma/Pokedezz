@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PokemonsCollectionViewController.swift
 //  Pokedezz
 //
 //  Created by Oscar Martín on 16/07/2019.
@@ -11,7 +11,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PokemonsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let minPokemon = 1
     let maxPokemon = 10
