@@ -31,9 +31,40 @@ class PokemonDetailsViewController: UIViewController {
             print(urlString)
             pokemonImageView.sd_setImage(with: URL(string: urlString))
             
-            let view = UIView()
-            view.backgroundColor = .red
-            myStack.addArrangedSubview(view)
+            let view1 = UIView()
+            view1.backgroundColor = .red
+            var yourLabel: UILabel = UILabel()
+            //yourLabel.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+            yourLabel.translatesAutoresizingMaskIntoConstraints = false
+            yourLabel.backgroundColor = .orange
+            yourLabel.textColor = .black
+            yourLabel.textAlignment = NSTextAlignment.center
+            yourLabel.text = "test label"
+            yourLabel.clipsToBounds = true
+            view1.addSubview(yourLabel)
+            
+            
+            myStack.addArrangedSubview(view1)
+            
+            
+            
+            let view2 = UIView()
+            view2.backgroundColor = .blue
+            var yourLabel2: UILabel = UILabel()
+            //yourLabel2.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
+            yourLabel2.translatesAutoresizingMaskIntoConstraints = false
+            yourLabel2.backgroundColor = .orange
+            yourLabel2.textColor = .black
+            yourLabel2.textAlignment = NSTextAlignment.center
+            yourLabel2.text = "test label"
+            yourLabel2.clipsToBounds = true
+            view2.addSubview(yourLabel2)
+
+
+            myStack.addArrangedSubview(view2)
+
+            
+            
         
             
         }
