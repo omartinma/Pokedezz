@@ -122,6 +122,10 @@
                                     <action selector="backAction:" destination="3L3-u8-TZS" eventType="touchUpInside" id="3Hd-ak-NOV"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-mu-ta3">
+                                <rect key="frame" x="20" y="610" width="273" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -137,6 +141,7 @@
                         <viewLayoutGuide key="safeArea" id="vV1-OW-bKM"/>
                     </view>
                     <connections>
+                        <outlet property="myStack" destination="Qkt-mu-ta3" id="f2P-FP-xIv"/>
                         <outlet property="pokemonImageView" destination="782-sW-q9J" id="y1N-KC-jwk"/>
                         <outlet property="pokemonLabelName" destination="Qp0-YQ-x6y" id="DmC-Ar-Hwp"/>
                     </connections>

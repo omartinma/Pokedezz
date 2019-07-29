@@ -10,37 +10,38 @@ import UIKit
 import SDWebImage
 
 class PokemonDetailsViewController: UIViewController {
-
+    
+    @IBOutlet weak var myStack: UIStackView!
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     var pokemon : Pokemon?
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var pokemonLabelName: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let poke = pokemon{
             view.setGradientBackgroundColor(colorOne: (poke.colors[0]), colorTwo: (poke.colors[1]))
             pokemonLabelName.text = poke.name.capitalizingFirstLetter()
-
+            
             //Getting new better image
             let urlString = "https://pokeres.bastionbot.org/images/pokemon/" + String(poke.id) + ".png"
             print(urlString)
-           pokemonImageView.sd_setImage(with: URL(string: urlString))
+            pokemonImageView.sd_setImage(with: URL(string: urlString))
+            
+            let view = UIView()
+            view.backgroundColor = .red
+            myStack.addArrangedSubview(view)
+        
+            
         }
-  
+        
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
 }
