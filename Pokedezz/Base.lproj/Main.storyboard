@@ -110,6 +110,18 @@
                                     <constraint firstAttribute="height" constant="300" id="3UN-TI-LKP"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jq-tu-n2v">
+                                <rect key="frame" x="38" y="73" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="PXi-AN-adp"/>
+                                    <constraint firstAttribute="width" constant="25" id="hGX-qc-oWX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="icons8-atrás-100"/>
+                                <connections>
+                                    <action selector="backAction:" destination="3L3-u8-TZS" eventType="touchUpInside" id="3Hd-ak-NOV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -117,6 +129,8 @@
                             <constraint firstItem="Qp0-YQ-x6y" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="Qhl-R5-ymQ"/>
                             <constraint firstItem="Qp0-YQ-x6y" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="132" id="T1L-N8-roH"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qp0-YQ-x6y" secondAttribute="trailing" constant="127" id="iK5-gX-Hqf"/>
+                            <constraint firstItem="0jq-tu-n2v" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="38" id="l8D-0z-ElA"/>
+                            <constraint firstItem="0jq-tu-n2v" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="29" id="naN-jg-iu2"/>
                             <constraint firstItem="782-sW-q9J" firstAttribute="top" secondItem="Qp0-YQ-x6y" secondAttribute="bottom" constant="53" id="oJ0-tU-UIj"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="782-sW-q9J" secondAttribute="trailing" constant="20" id="q1a-Z7-IAR"/>
                         </constraints>
@@ -133,6 +147,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-atrás-100" width="100" height="100"/>
         <image name="pokeball" width="747" height="750"/>
     </resources>
 </document>

@@ -11,6 +11,9 @@ import SDWebImage
 
 class PokemonDetailsViewController: UIViewController {
 
+    @IBAction func backAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     var pokemon : Pokemon?
     @IBOutlet weak var pokemonImageView: UIImageView!
     @IBOutlet weak var pokemonLabelName: UILabel!
