@@ -28,9 +28,9 @@ class PokemonDetailsViewController: UIViewController {
             
             //Getting new better image
             let urlString = "https://pokeres.bastionbot.org/images/pokemon/" + String(poke.id) + ".png"
-            print(urlString)
             pokemonImageView.sd_setImage(with: URL(string: urlString))
             
+            // Creating the view
             let view1 = UIView()
             view1.backgroundColor = .red
             view1.layer.borderColor = UIColor.black.cgColor
@@ -39,17 +39,16 @@ class PokemonDetailsViewController: UIViewController {
             view1.clipsToBounds = true
             
             
-            
+            // Creating the label inside the view
             let yourLabel: UILabel = UILabel()
-            
             yourLabel.translatesAutoresizingMaskIntoConstraints = false
-            
             yourLabel.backgroundColor = .orange
             yourLabel.textColor = .black
             yourLabel.textAlignment = NSTextAlignment.center
-            yourLabel.text = "test label"
+            yourLabel.text = "test"
             view1.addSubview(yourLabel)
             
+            // Constraints of the label
             let widthLabelConstraint = NSLayoutConstraint(item: yourLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view1, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: 0)
              NSLayoutConstraint.activate([widthLabelConstraint])
 
@@ -58,24 +57,10 @@ class PokemonDetailsViewController: UIViewController {
   
             
             myStack.addArrangedSubview(view1)
-           
             
             
-//            let view2 = UIView()
-//            view2.backgroundColor = .blue
-//            var yourLabel2: UILabel = UILabel()
-//            //yourLabel2.frame = CGRect(x: 0, y: 0, width: 200, height: 21)
-//            yourLabel2.translatesAutoresizingMaskIntoConstraints = false
-//            yourLabel2.backgroundColor = .orange
-//            yourLabel2.textColor = .black
-//            yourLabel2.textAlignment = NSTextAlignment.center
-//            yourLabel2.text = "test label"
-//            yourLabel2.clipsToBounds = true
-//            view2.addSubview(yourLabel2)
-//
-//
-//            myStack.addArrangedSubview(view2)
 
+            
             
             
         

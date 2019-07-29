@@ -122,16 +122,19 @@
                                     <action selector="backAction:" destination="3L3-u8-TZS" eventType="touchUpInside" id="3Hd-ak-NOV"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-mu-ta3">
-                                <rect key="frame" x="49" y="220" width="82" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-mu-ta3">
+                                <rect key="frame" x="49" y="220" width="316" height="23"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Qkt-mu-ta3" firstAttribute="top" secondItem="Qp0-YQ-x6y" secondAttribute="bottom" constant="8" id="0Je-SE-jMq"/>
+                            <constraint firstItem="782-sW-q9J" firstAttribute="top" secondItem="Qkt-mu-ta3" secondAttribute="bottom" constant="22" id="9Cw-SB-U3h"/>
                             <constraint firstItem="782-sW-q9J" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="20" id="G2M-vj-Ehh"/>
+                            <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qkt-mu-ta3" secondAttribute="trailing" priority="250" constant="49" id="LbE-H2-8an"/>
                             <constraint firstItem="Qp0-YQ-x6y" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="Qhl-R5-ymQ"/>
                             <constraint firstItem="Qp0-YQ-x6y" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="132" id="T1L-N8-roH"/>
+                            <constraint firstItem="Qkt-mu-ta3" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="bTi-AF-buL"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qp0-YQ-x6y" secondAttribute="trailing" constant="127" id="iK5-gX-Hqf"/>
                             <constraint firstItem="0jq-tu-n2v" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="38" id="l8D-0z-ElA"/>
                             <constraint firstItem="0jq-tu-n2v" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="29" id="naN-jg-iu2"/>
