@@ -40,7 +40,7 @@ class PokemonDetailsViewController: UIViewController {
             
             
             // Creating the label inside the view
-            let yourLabel: UILabel = UILabel()
+            let yourLabel: PokemonTypeLabel = PokemonTypeLabel()
             yourLabel.translatesAutoresizingMaskIntoConstraints = false
             yourLabel.backgroundColor = .orange
             yourLabel.textColor = .black
@@ -50,13 +50,42 @@ class PokemonDetailsViewController: UIViewController {
             
             // Constraints of the label
             let widthLabelConstraint = NSLayoutConstraint(item: yourLabel, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view1, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: 0)
-             NSLayoutConstraint.activate([widthLabelConstraint])
 
             let heigthLabelConstraint = NSLayoutConstraint(item: yourLabel, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view1, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1, constant: 0)
             NSLayoutConstraint.activate([widthLabelConstraint, heigthLabelConstraint])
   
             
             myStack.addArrangedSubview(view1)
+            
+            
+            
+            
+            // Creating the view
+            let view2 = UIView()
+            view2.backgroundColor = .red
+            view2.layer.borderColor = UIColor.black.cgColor
+            view2.layer.borderWidth = 1
+            view2.layer.cornerRadius = 10
+            view2.clipsToBounds = true
+            
+            
+            // Creating the label inside the view
+            let yourLabel2: PokemonTypeLabel = PokemonTypeLabel()
+            yourLabel2.translatesAutoresizingMaskIntoConstraints = false
+            yourLabel2.backgroundColor = .orange
+            yourLabel2.textColor = .black
+            yourLabel2.textAlignment = NSTextAlignment.center
+            yourLabel2.text = "test longerrrr"
+            view2.addSubview(yourLabel2)
+            
+            // Constraints of the label
+            let widthLabelConstraint2 = NSLayoutConstraint(item: yourLabel2, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view2, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: 0)
+            
+            let heigthLabelConstraint2 = NSLayoutConstraint(item: yourLabel2, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: view2, attribute: NSLayoutConstraint.Attribute.height, multiplier: 1, constant: 0)
+            NSLayoutConstraint.activate([widthLabelConstraint2, heigthLabelConstraint2])
+            
+            
+            myStack.addArrangedSubview(view2)
             
             
 
