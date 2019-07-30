@@ -13,7 +13,6 @@ class Pokemon{
     var name : String = ""
     var id : Int = 0
     var imageUrl : String = ""
-    var imageData: UIImage? = nil
     var types :  [String]  = []
     var colors : [UIColor] = []
 }
