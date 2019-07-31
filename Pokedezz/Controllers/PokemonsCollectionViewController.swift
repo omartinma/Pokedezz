@@ -48,10 +48,23 @@ class PokemonsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is PokemonDetailsViewController{
             let vc = segue.destination as? PokemonDetailsViewController
+            //vc?.transitioningDelegate = self
             var index = self.pokemonCollectionView.indexPathsForSelectedItems?.first
             vc?.pokemon = pokemonDict[index!.row+1]
         }
     }
     
+}
+
+extension PokemonsCollectionViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController)
+        -> UIViewControllerAnimatedTransitioning? {
+            let att = self.pokemonCollectionView.layoutAttributesForItem(at: self.pokemonCollectionView.indexPathsForSelectedItems!.first!)
+            print(att!.frame)
+            let newFrame = CGRect(x: 90, y: 203, width: 193, height: 212)
+            return FlipPresentAnimationController(originFrame: newFrame)
+    }
 }
 
