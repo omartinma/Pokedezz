@@ -56,7 +56,7 @@ class PokemonsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is PokemonDetailsViewController{
             let vc = segue.destination as? PokemonDetailsViewController
-            //vc?.transitioningDelegate = self
+            //vc?.transitioningDelegate = self uncomment to custom delegate for animation in presentation
             var index = self.pokemonCollectionView.indexPathsForSelectedItems?.first
             vc?.pokemon = pokemonDict[index!.row+1]
         }

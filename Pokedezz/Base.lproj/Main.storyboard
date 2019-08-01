@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i7z-ZD-IL1">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -62,7 +62,7 @@
                                         <connections>
                                             <outlet property="pokemonImage" destination="cQ2-53-lf5" id="bsC-gT-XgW"/>
                                             <outlet property="pokemonNameLabel" destination="RDD-bg-Z8h" id="Y9y-fM-R59"/>
-                                            <segue destination="3L3-u8-TZS" kind="showDetail" id="bqX-1X-5yF"/>
+                                            <segue destination="3L3-u8-TZS" kind="presentation" modalTransitionStyle="flipHorizontal" id="bqX-1X-5yF"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -82,13 +82,14 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cW8-5K-kD9"/>
                     <connections>
                         <outlet property="pokemonCollectionView" destination="eTG-1h-hdY" id="BjX-Qx-heO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47.826086956521742" y="66.964285714285708"/>
+            <point key="canvasLocation" x="957.97101449275374" y="66.964285714285708"/>
         </scene>
         <!--Pokemon Details View Controller-->
         <scene sceneID="KIa-ZM-LTT">
@@ -151,7 +152,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFB-0y-Sml" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000.0000000000001" y="54.910714285714285"/>
+            <point key="canvasLocation" x="1910.144927536232" y="54.910714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f95-YR-418">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="i7z-ZD-IL1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W8F-WD-JZa">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="atI-Tu-jA9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zFH-jf-6pE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Y-g2-q1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="66.964285714285708"/>
         </scene>
     </scenes>
     <resources>
