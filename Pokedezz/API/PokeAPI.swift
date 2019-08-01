@@ -132,7 +132,9 @@ public class PokeAPI{
             let pokemon = getPokemon(id: index)
             if pokemon !=  nil {
                 pokemonDict[index] = pokemon
-                completion(pokemonDict)
+                if index == maxPokemon{
+                     completion(pokemonDict)
+                }
             }
             else {
                 Alamofire.request("https://pokeapi.co/api/v2/pokemon/" + String(index)).responseJSON { response in
