@@ -100,13 +100,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp0-YQ-x6y">
-                                <rect key="frame" x="49" y="176" width="238" height="36"/>
+                                <rect key="frame" x="49" y="142" width="238" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kia-YD-oyD">
+                                <rect key="frame" x="0.0" y="494" width="414" height="402"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rs-ia-Sn6">
+                                        <rect key="frame" x="40" y="41" width="329" height="40"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rl8-Vb-Qy4" customClass="PokemonDetailsSegmentedControl" customModule="Pokedezz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="About"/>
+                                                    <segment title="Stats"/>
+                                                    <segment title="Evolution"/>
+                                                    <segment title="Moves"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentedControlChangedIndex:" destination="3L3-u8-TZS" eventType="valueChanged" id="tlr-kd-OcO"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1Rs-ia-Sn6" firstAttribute="top" secondItem="Kia-YD-oyD" secondAttribute="top" constant="41" id="6Ie-KL-1Mh"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Rs-ia-Sn6" secondAttribute="trailing" constant="45" id="7Gu-m1-Iaa"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Rs-ia-Sn6" secondAttribute="bottom" constant="321" id="AXB-v6-vun"/>
+                                    <constraint firstItem="1Rs-ia-Sn6" firstAttribute="leading" secondItem="Kia-YD-oyD" secondAttribute="leading" constant="40" id="JtC-uW-aSN"/>
+                                    <constraint firstItem="1Rs-ia-Sn6" firstAttribute="top" secondItem="Kia-YD-oyD" secondAttribute="top" constant="41" id="bIm-cc-NpE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="782-sW-q9J">
-                                <rect key="frame" x="20" y="265" width="374" height="300"/>
+                                <rect key="frame" x="20" y="231" width="374" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="3UN-TI-LKP"/>
                                 </constraints>
@@ -124,23 +160,27 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Qkt-mu-ta3">
-                                <rect key="frame" x="49" y="220" width="316" height="23"/>
+                                <rect key="frame" x="49" y="186" width="316" height="23"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Qkt-mu-ta3" firstAttribute="top" secondItem="Qp0-YQ-x6y" secondAttribute="bottom" constant="8" id="0Je-SE-jMq"/>
                             <constraint firstItem="782-sW-q9J" firstAttribute="top" secondItem="Qkt-mu-ta3" secondAttribute="bottom" constant="22" id="9Cw-SB-U3h"/>
+                            <constraint firstAttribute="bottom" secondItem="Kia-YD-oyD" secondAttribute="bottom" id="Clt-Fd-ubL"/>
                             <constraint firstItem="782-sW-q9J" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="20" id="G2M-vj-Ehh"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qkt-mu-ta3" secondAttribute="trailing" priority="250" constant="49" id="LbE-H2-8an"/>
                             <constraint firstItem="Qp0-YQ-x6y" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="Qhl-R5-ymQ"/>
-                            <constraint firstItem="Qp0-YQ-x6y" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="132" id="T1L-N8-roH"/>
+                            <constraint firstItem="Qp0-YQ-x6y" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="98" id="T1L-N8-roH"/>
                             <constraint firstItem="Qkt-mu-ta3" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="49" id="bTi-AF-buL"/>
+                            <constraint firstItem="Kia-YD-oyD" firstAttribute="trailing" secondItem="vV1-OW-bKM" secondAttribute="trailing" id="d2P-uY-GOK"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="Qp0-YQ-x6y" secondAttribute="trailing" constant="127" id="iK5-gX-Hqf"/>
                             <constraint firstItem="0jq-tu-n2v" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" constant="38" id="l8D-0z-ElA"/>
                             <constraint firstItem="0jq-tu-n2v" firstAttribute="top" secondItem="vV1-OW-bKM" secondAttribute="top" constant="29" id="naN-jg-iu2"/>
+                            <constraint firstItem="Kia-YD-oyD" firstAttribute="top" secondItem="Qkt-mu-ta3" secondAttribute="bottom" constant="285" id="oAH-mA-m1m"/>
                             <constraint firstItem="782-sW-q9J" firstAttribute="top" secondItem="Qp0-YQ-x6y" secondAttribute="bottom" constant="53" id="oJ0-tU-UIj"/>
                             <constraint firstItem="vV1-OW-bKM" firstAttribute="trailing" secondItem="782-sW-q9J" secondAttribute="trailing" constant="20" id="q1a-Z7-IAR"/>
+                            <constraint firstItem="Kia-YD-oyD" firstAttribute="leading" secondItem="vV1-OW-bKM" secondAttribute="leading" id="ty1-wm-hBM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vV1-OW-bKM"/>
                     </view>
@@ -148,6 +188,8 @@
                         <outlet property="myStack" destination="Qkt-mu-ta3" id="f2P-FP-xIv"/>
                         <outlet property="pokemonImageView" destination="782-sW-q9J" id="y1N-KC-jwk"/>
                         <outlet property="pokemonLabelName" destination="Qp0-YQ-x6y" id="DmC-Ar-Hwp"/>
+                        <outlet property="segmentedContainer" destination="1Rs-ia-Sn6" id="Lqb-Ky-1tN"/>
+                        <outlet property="segmentedControl" destination="Rl8-Vb-Qy4" id="Db1-Xi-ZtT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFB-0y-Sml" userLabel="First Responder" sceneMemberID="firstResponder"/>

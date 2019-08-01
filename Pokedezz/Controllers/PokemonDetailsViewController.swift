@@ -11,7 +11,15 @@ import SDWebImage
 
 class PokemonDetailsViewController: UIViewController {
     
-
+    @IBOutlet weak var segmentedContainer: UIView!
+    var selectedSegmentedControlView: UIView!
+    @IBOutlet weak var segmentedControl: PokemonDetailsSegmentedControl!
+    @IBAction func segmentedControlChangedIndex(_ sender: Any) {
+        selectedSegmentedControlView.frame.origin.x = (segmentedControl.frame.width / CGFloat(segmentedControl.numberOfSegments)) * CGFloat(segmentedControl.selectedSegmentIndex)
+        
+    }
+    
+    
     @IBOutlet weak var myStack: UIStackView!
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -22,8 +30,10 @@ class PokemonDetailsViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
+        
+        
         if let poke = pokemon{
             view.setGradientBackgroundColor(colorOne: (poke.colors[0]), colorTwo: (poke.colors[1]))
             pokemonLabelName.text = poke.name.capitalizingFirstLetter()
@@ -36,10 +46,32 @@ class PokemonDetailsViewController: UIViewController {
             for pokeType in poke.types{
                 setPokemonTypeView(type: pokeType, color: poke.colors[0].withAlphaComponent(0.8))
             }
-  
+            
+            // Set the tabulation
+            setTabulation(color: poke.colors[0].withAlphaComponent(0.8))
+            
+            
         }
         
         
+    }
+    
+    func setTabulation(color : UIColor){
+        let width = Int(segmentedControl.frame.width) / segmentedControl.numberOfSegments
+        let selectedHeight = 5
+        let y = Int(segmentedControl.frame.height) - selectedHeight
+        selectedSegmentedControlView = UIView(frame: CGRect(x: 0, y: y, width: width, height: selectedHeight))
+        selectedSegmentedControlView.translatesAutoresizingMaskIntoConstraints = false
+        
+        selectedSegmentedControlView.backgroundColor = color
+        segmentedControl.tintColor = .red
+        
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont(name: "DINCondensed-Bold", size: 18),
+            NSAttributedString.Key.foregroundColor: color
+            ], for: .selected)
+        
+        segmentedContainer.addSubview(selectedSegmentedControlView)
     }
     
     func setPokemonTypeView(type : String, color : UIColor){
