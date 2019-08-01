@@ -15,7 +15,10 @@ class PokemonDetailsViewController: UIViewController {
     var selectedSegmentedControlView: UIView!
     @IBOutlet weak var segmentedControl: PokemonDetailsSegmentedControl!
     @IBAction func segmentedControlChangedIndex(_ sender: Any) {
-        selectedSegmentedControlView.frame.origin.x = (segmentedControl.frame.width / CGFloat(segmentedControl.numberOfSegments)) * CGFloat(segmentedControl.selectedSegmentIndex)
+        UIView.animate(withDuration: 0.3) {
+            self.selectedSegmentedControlView.frame.origin.x = (self.segmentedControl.frame.width / CGFloat(self.segmentedControl.numberOfSegments)) * CGFloat(self.segmentedControl.selectedSegmentIndex)
+        }
+       
         
     }
     
