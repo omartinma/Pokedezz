@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import Alamofire
 import SwiftyJSON
+import ViewAnimator
 
 class PokemonsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -21,7 +22,14 @@ class PokemonsCollectionViewController: UIViewController, UICollectionViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.pokemonCollectionView.isPrefetchingEnabled = false
         // Do any additional setup after loading the view.
+        //let animation1 = AnimationType.from(direction: .left, offset: 300)
+        let animation2 = AnimationType.zoom(scale: 0.1)
+
+       pokemonCollectionView.animate(animations: [animation2], reversed: false, initialAlpha: 1, finalAlpha: 1, delay: 0, duration: 1.5, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: UIView.AnimationOptions.allowAnimatedContent, completion: nil)
+    
+        
         let pokeApi = PokeAPI()
         pokeApi.downloadPokemonData(minPokemon: minPokemon, maxPokemon: maxPokemon, completion:
             {_data in

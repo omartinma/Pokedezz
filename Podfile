@@ -6,4 +6,5 @@ target 'Pokedezz' do
 pod 'Alamofire', '~> 4.0'
 pod 'SwiftyJSON'
 pod 'SDWebImage'
+pod "ViewAnimator"
 end
